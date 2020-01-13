@@ -9,6 +9,9 @@ define([
         // this adds these extra keys too the base class, so that
         // all newly created cells will have them.
         var extraKeys = CodeMirror.keyMap.emacs;
+        delete extraKeys["Ctrl-X"];
+        delete extraKeys["Ctrl-C"];
+        delete extraKeys["Ctrl-V"];
 
         if (!extraKeys["Enter"]) extraKeys["Enter"] = "newlineAndIndent";
 
